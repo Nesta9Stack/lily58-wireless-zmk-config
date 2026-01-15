@@ -9,6 +9,29 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        initial: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(T) &kp H &kp A &kp N &kp K &kp SPACE &kp Y &kp O &kp U &kp SPACE &kp F &kp O &kp R &kp SPACE &kp C &kp O &kp N &kp T &kp A &kp C &kp T &kp I &kp N &kp G &kp SPACE &kp T &kp H &kp E &kp SPACE &kp LS(N) &kp A &kp T &kp I &kp O &kp N &kp A &kp L &kp SPACE &kp LS(S) &kp T &kp A &kp N &kp D &kp A &kp R &kp D &kp I &kp S &kp E &kp D &kp SPACE &kp LS(A) &kp S &kp S &kp E &kp S &kp S &kp M &kp E &kp N &kp T &kp S &kp SPACE &kp F &kp O &kp R &kp SPACE &kp LS(S) &kp C &kp O &kp T &kp L &kp A &kp N &kp D &kp SPACE &kp LPAR &kp LS(N) &kp LS(S) &kp LS(A) &kp RPAR &kp SPACE &kp S &kp E &kp R &kp V &kp I &kp C &kp E &kp SPACE &kp D &kp E &kp S &kp K &kp SPACE &kp W &kp I &kp T &kp H &kp SPACE &kp Y &kp O &kp U &kp R &kp SPACE &kp Q &kp U &kp E &kp R &kp Y &kp DOT>;
+            label = "NEW_MACRO";
+        };
+
+        end: end {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(I) &kp SPACE &kp H &kp O &kp P &kp E &kp SPACE &kp T &kp H &kp I &kp S &kp SPACE &kp I &kp S &kp SPACE &kp H &kp E &kp L &kp P &kp F &kp U &kp L &kp COMMA &kp SPACE &kp P &kp L &kp E &kp A &kp S &kp E &kp SPACE &kp F &kp E &kp E &kp L &kp SPACE &kp F &kp R &kp E &kp E &kp SPACE &kp T &kp O &kp SPACE &kp C &kp O &kp N &kp T &kp A &kp C &kp T &kp SPACE &kp T &kp H &kp E &kp SPACE &kp S &kp E &kp R &kp V &kp I &kp C &kp E &kp SPACE &kp D &kp E &kp S &kp K &kp SPACE &kp W &kp I &kp T &kp H &kp SPACE &kp A &kp N &kp Y &kp SPACE &kp F &kp U &kp R &kp T &kp H &kp E &kp R &kp SPACE &kp Q &kp U &kp E &kp S &kp T &kp I &kp O &kp N &kp S &kp DOT>;
+            label = "END";
+        };
+
+        undo: undo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(Z)>;
+            label = "UNDO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
